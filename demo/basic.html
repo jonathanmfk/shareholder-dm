@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>shareholder-dm demo</title>
+  <script>
+    window.IntlMsg = window.IntlMsg || {};
+    window.IntlMsg.lang = document.documentElement.lang;
+    window.IntlMsg.localesHost = '.';
+  </script>
+  <script type="module" src="./demo.js"></script>
+</head>
+
+<body>
+  <shareholder-dm id="myDm"></shareholder-dm>
+  <bbva-web-button-default style="margin-bottom: 1rem;" onclick="getData(1)">GET Shareholder-list</bbva-web-button-default>
+  <bbva-web-button-default style="margin-bottom: 1rem;" onclick="getData(2)">GET Shareholder-detail</bbva-web-button-default>
+  <bbva-web-button-default style="margin-bottom: 1rem;" onclick="getData(3)">Fail Service</bbva-web-button-default>
+  <script>
+    const dm = document.getElementById('myDm');
+
+    function getData(options) {
+      switch (options) {
+        case 1:
+          dm.path = "accionistas"
+          dm.nameEventSuccess = "shareholder-list"
+          break;
+        case 2:
+          dm.path = "accionistas?NIT=80808080&TipoDocumento=NIT"
+          dm.nameEventSuccess = "shareholder-detail"
+          break;
+        case 3:
+          dm.path = "accionis"
+          break;
+      }
+      dm.getDataService()
+    }
+  </script>
+</body>
+
+</html>
