@@ -1,36 +1,65 @@
 # @gema-dm/shareholder-dm
 
-## Package info
+## Package información
 
-### Package installation
+### Package instalación
 
-Installation using NPM
+Instalación usando NPM
 
 ```bash
 npm install @gema-dm/shareholder-dm
 ```
 
+## Instalación de dependencias
 
+* Para instalar las dependecias utiliza el siguente comando corto
 
-## ShareholderDm (Class) shareholder-dm (Custom Element) 
+~~~
+$ npm i
+~~~
+## Ejecutar el componente
 
-### Extends from
+* Para iniciar el componente tiene que utilizar el atajo corto de npm
 
-LitElement (lit-element package)
+~~~
+$ npm start
+~~~
+* O en su defecto utilizar el comando propio de Cells.
+~~~
+$ cells lit-component:serve
+~~~
 
-### Description
+## Ejecutar test
 
-![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)
+* Para ejecutar los test del componente tiene que utilizar el atajo corto de npm
 
-This component ...
+~~~
+$ npm test
+~~~
+* O en su defecto utilizar el comando propio de Cells.
+~~~
+$ cells lit-component:test
+~~~
 
-Example:
+## Ejecutar lint
+
+* Para ejecutar el lint del componente tiene que utilizar el atajo corto de npm
+
+~~~
+$ npm run lint
+~~~
+* O en su defecto utilizar el comando propio de Cells.
+~~~
+$ cells lit-component:lint
+~~~
+
+Etiqueta HTML:
 
 ```html
   <shareholder-dm></shareholder-dm>
 ```
 
-### Properties
+## ShareholderDm (Class) shareholder-dm (Custom Element)
+### Hereda de
 
-- **name** (attribute: name): string = "Cells"
-    Description for property
+LitElement (lit-element package)
