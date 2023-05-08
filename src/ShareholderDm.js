@@ -42,15 +42,15 @@ export class ShareholderDm extends LitElement {
   }
 
   getDataService() {
-    const rickAndMortyAPI = this.shadowRoot.querySelector('#bgadpGeneric');
-    rickAndMortyAPI.host = this.host;
-    rickAndMortyAPI.path = this.path;
-    rickAndMortyAPI.method = this.method;
-    rickAndMortyAPI.generateRequest();
+    const dm = this.shadowRoot.querySelector('#bgadpGeneric');
+    dm.host = this.host;
+    dm.path = this.path;
+    dm.method = this.method;
+    dm.generateRequest();
   }
 
   responseSuccess(e) {
-    this._fireEvent('response-' + this.nameEventSuccess + '-success', e.detail);
+    this._fireEvent(`response-${this.nameEventSuccess}-success`, e.detail);
   }
 
   responseError(e) {
@@ -63,7 +63,7 @@ export class ShareholderDm extends LitElement {
    * @param {Object} detail
    */
   _fireEvent(nameEvent, detail = {}) {
-    this.dispatchEvent(new CustomEvent(nameEvent, { bubbles: true, composed: true, detail: detail }));
+    this.dispatchEvent(new CustomEvent(nameEvent, { bubbles: true, composed: true, detail }));
   }
 
   render() {
